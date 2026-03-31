@@ -16,54 +16,78 @@ const trustStats = [
   { value: '24/7', label: 'WhatsApp response window' },
 ]
 
+const clientLogos = [
+  'Hopefully',
+  'All World Express',
+  'Nova Dental',
+  'Urban Lift',
+  'Pixel Brew',
+]
+
 const services = [
   {
     id: '01',
+    icon: 'WD',
     title: 'Website Development',
     text: 'Landing pages, business sites, funnels and premium redesigns that feel fast and trustworthy.',
     meta: 'Starting from Rs. 6,999',
+    benefit: 'Fast, SEO-friendly and mobile optimized websites',
   },
   {
     id: '02',
+    icon: 'SM',
     title: 'Social Media Marketing',
     text: 'Creative campaigns and content systems built to turn attention into calls, leads and repeat business.',
     meta: 'Campaigns built for lead flow',
+    benefit: 'Campaigns designed to generate enquiries and repeat attention',
   },
   {
     id: '03',
+    icon: 'SG',
     title: 'SEO & GMB',
     text: 'Search visibility upgrades, local ranking setup and profiles that help nearby customers discover you first.',
     meta: 'Local ranking and search intent',
+    benefit: 'Search-ready setup for local visibility and trust',
   },
   {
     id: '04',
+    icon: 'VE',
     title: 'Video Editing',
     text: 'Short-form reels, promo edits and ad creatives polished for retention, clarity and conversion.',
     meta: 'Reels, promos and ad edits',
+    benefit: 'Retention-focused creatives for social and ads',
   },
   {
     id: '05',
+    icon: 'SD',
     title: 'Software Development',
     text: 'Custom dashboards, admin panels, booking systems and business tools built around your workflow.',
     meta: 'CRM, portals and custom tools',
+    benefit: 'Business systems that save time and scale operations',
   },
   {
     id: '06',
+    icon: 'YT',
     title: 'YouTube Automation',
     text: 'Channel strategy, content systems, thumbnails, scripting support and publishing workflows for consistent growth.',
     meta: 'Scaling channels with smart systems',
+    benefit: 'Systems for consistent publishing and faster channel growth',
   },
   {
     id: '07',
+    icon: 'LG',
     title: 'Logo Designing',
     text: 'Distinctive brand marks and logo systems designed to make your business look polished and memorable.',
     meta: 'Clean identity and strong recall',
+    benefit: 'A stronger first impression for every customer touchpoint',
   },
   {
     id: '08',
+    icon: 'BM',
     title: 'Brand Marketing',
     text: 'Positioning, campaigns and creative messaging that help your business stand out and stay trusted.',
     meta: 'Awareness, trust and growth',
+    benefit: 'Sharper positioning with market-ready brand communication',
   },
 ]
 
@@ -93,9 +117,11 @@ const portfolio = [
     outcome: 'High conversion funnel',
     note: 'Live project - real client work',
     liveUrl: 'https://hopefully.in/',
-    preview: '/hopefully.png',
+    preview: '/hopefully-optimized.jpg',
     previewAlt: 'Insert Hopefully website screenshot here',
     placeholder: 'Insert Hopefully hero screenshot here',
+    previewWidth: 1200,
+    previewHeight: 595,
   },
   {
     name: 'All World Express',
@@ -103,9 +129,11 @@ const portfolio = [
     outcome: 'Custom business solution',
     note: 'Live project - real client work',
     liveUrl: 'https://allworldexpress.in/',
-    preview: '/allworldexpress.png',
+    preview: '/allworldexpress-optimized.jpg',
     previewAlt: 'Insert All World Express website screenshot here',
     placeholder: 'Insert All World Express hero screenshot here',
+    previewWidth: 1200,
+    previewHeight: 598,
   },
   {
     name: 'Your Business Could Be Next',
@@ -270,7 +298,8 @@ function App() {
   }
 
   return (
-    <div className="app-shell">
+    <>
+      <div className="app-shell">
       <header className="topbar" data-reveal>
         <a className="brand" href="#home" aria-label="Creative Code Hub home">
           <span className="brand-mark">C</span>
@@ -299,19 +328,20 @@ function App() {
           <div className="hero-glow hero-glow-two" aria-hidden="true"></div>
 
           <div className="hero-copy">
-            <span className="eyebrow">Premium websites for businesses that want more clients</span>
-            <h1>We Build Websites That Turn Visitors Into Paying Clients</h1>
+            <span className="eyebrow">Premium websites and marketing for growing businesses</span>
+            <h1>Get a Professional Website for Your Business</h1>
+            <p className="hero-offer">Starting at Rs. 6,999 | Delivered in 3-7 Days</p>
             <p className="hero-text">
-              Fast, modern and high-converting websites crafted to impress visitors,
-              build trust instantly and turn clicks into WhatsApp conversations.
+              We design conversion-focused websites, software and marketing systems
+              that help your business look trusted, rank better and bring real enquiries.
             </p>
 
             <div className="hero-actions">
               <a className="button button-primary" href={whatsappLink}>
-                Get Started
+                Get Consultation
               </a>
-              <a className="button button-secondary" href="#work">
-                View Work
+              <a className="button button-secondary" href={whatsappLink}>
+                WhatsApp Now
               </a>
             </div>
 
@@ -380,6 +410,15 @@ function App() {
           ))}
         </section>
 
+        <section className="logo-strip glass-card" data-reveal aria-label="Trusted brands">
+          <span className="logo-strip-title">Trusted by growing brands</span>
+          <div className="logo-strip-items">
+            {clientLogos.map((logo) => (
+              <span key={logo}>{logo}</span>
+            ))}
+          </div>
+        </section>
+
         <section className="section" id="services" data-reveal>
           <div className="section-heading">
             <span className="eyebrow">Services</span>
@@ -393,12 +432,36 @@ function App() {
           <div className="service-grid">
             {services.map((service) => (
               <article key={service.title} className="glass-card service-card" data-reveal>
+                <span className="service-icon" aria-hidden="true">
+                  {service.icon}
+                </span>
                 <span className="card-id">{service.id}</span>
                 <h3>{service.title}</h3>
                 <p>{service.text}</p>
+                <small className="service-benefit">{service.benefit}</small>
                 <span className="service-meta">{service.meta}</span>
               </article>
             ))}
+          </div>
+
+          <div className="section-cta glass-card" data-reveal>
+            <div>
+              <span className="eyebrow">Need a custom quote?</span>
+              <h3>Tell us what you need and we will recommend the right solution.</h3>
+            </div>
+            <div className="section-cta-actions">
+              <a className="button button-primary" href="#contact">
+                Start Your Project
+              </a>
+              <a className="button button-secondary" href={whatsappLink}>
+                Get Quote
+              </a>
+            </div>
+          </div>
+
+          <div className="seo-links" data-reveal>
+            <a href="/website-development-lucknow/">Website Development Lucknow</a>
+            <a href="/digital-marketing-services/">Digital Marketing Services</a>
           </div>
         </section>
 
@@ -457,7 +520,15 @@ function App() {
                       rel="noreferrer"
                     >
                       {item.preview ? (
-                        <img src={item.preview} alt={item.previewAlt} loading="lazy" />
+                        <img
+                          src={item.preview}
+                          alt={item.previewAlt}
+                          loading="lazy"
+                          decoding="async"
+                          fetchPriority="low"
+                          width={item.previewWidth}
+                          height={item.previewHeight}
+                        />
                       ) : (
                         <div className="project-image-placeholder">
                           <span>{item.placeholder}</span>
@@ -489,6 +560,21 @@ function App() {
                 </div>
               </article>
             ))}
+          </div>
+
+          <div className="section-cta glass-card" data-reveal>
+            <div>
+              <span className="eyebrow">Ready for similar results?</span>
+              <h3>Book a quick call or send your project brief and we will guide the next step.</h3>
+            </div>
+            <div className="section-cta-actions">
+              <a className="button button-primary" href="#contact">
+                Book Free Call
+              </a>
+              <a className="button button-secondary" href={whatsappLink}>
+                Start on WhatsApp
+              </a>
+            </div>
           </div>
         </section>
 
@@ -534,6 +620,21 @@ function App() {
               </article>
             ))}
           </div>
+
+          <div className="section-cta glass-card" data-reveal>
+            <div>
+              <span className="eyebrow">Want a trusted digital presence?</span>
+              <h3>Let&apos;s build a website and brand system that makes clients take you seriously.</h3>
+            </div>
+            <div className="section-cta-actions">
+              <a className="button button-primary" href="#contact">
+                Start Your Project
+              </a>
+              <a className="button button-secondary" href={whatsappLink}>
+                WhatsApp Now
+              </a>
+            </div>
+          </div>
         </section>
 
         <section className="section" data-reveal>
@@ -552,7 +653,7 @@ function App() {
               <a className="button button-primary" href={whatsappLink}>
                 WhatsApp Now
               </a>
-              <a className="button button-secondary" href="tel:+919000000000">
+              <a className="button button-secondary" href="tel:+916393956624">
                 Call Us
               </a>
             </div>
@@ -636,8 +737,12 @@ function App() {
             </form>
           </div>
         </section>
-      </main>
-    </div>
+        </main>
+      </div>
+      <a className="floating-whatsapp" href={whatsappLink} aria-label="Chat on WhatsApp">
+        WhatsApp
+      </a>
+    </>
   )
 }
 
