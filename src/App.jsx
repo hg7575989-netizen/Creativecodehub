@@ -26,70 +26,120 @@ const clientLogos = [
 
 const services = [
   {
-    id: '01',
-    icon: 'WD',
+    icon: 'monitor',
     title: 'Website Development',
-    text: 'Landing pages, business sites, funnels and premium redesigns that feel fast and trustworthy.',
-    meta: 'Starting from Rs. 6,999',
-    benefit: 'Fast, SEO-friendly and mobile optimized websites',
+    text: 'Get a professional, fast, and SEO-friendly website that converts visitors into customers.',
+    accent: 'cyan',
   },
   {
-    id: '02',
-    icon: 'SM',
+    icon: 'heart',
     title: 'Social Media Marketing',
-    text: 'Creative campaigns and content systems built to turn attention into calls, leads and repeat business.',
-    meta: 'Campaigns built for lead flow',
-    benefit: 'Campaigns designed to generate enquiries and repeat attention',
+    text: 'Grow your audience and generate leads through targeted social media campaigns.',
+    accent: 'pink',
   },
   {
-    id: '03',
-    icon: 'SG',
-    title: 'SEO & GMB',
-    text: 'Search visibility upgrades, local ranking setup and profiles that help nearby customers discover you first.',
-    meta: 'Local ranking and search intent',
-    benefit: 'Search-ready setup for local visibility and trust',
+    icon: 'chart',
+    title: 'SEO & Local Ranking',
+    text: 'Boost your visibility on Google and attract more local customers searching for your services.',
+    accent: 'cyan',
   },
   {
-    id: '04',
-    icon: 'VE',
+    icon: 'video',
     title: 'Video Editing',
-    text: 'Short-form reels, promo edits and ad creatives polished for retention, clarity and conversion.',
-    meta: 'Reels, promos and ad edits',
-    benefit: 'Retention-focused creatives for social and ads',
+    text: 'Engage your viewers with attention-grabbing videos designed to retain and convert.',
+    accent: 'cyan',
   },
   {
-    id: '05',
-    icon: 'SD',
-    title: 'Software Development',
-    text: 'Custom dashboards, admin panels, booking systems and business tools built around your workflow.',
-    meta: 'CRM, portals and custom tools',
-    benefit: 'Business systems that save time and scale operations',
-  },
-  {
-    id: '06',
-    icon: 'YT',
+    icon: 'youtube',
     title: 'YouTube Automation',
-    text: 'Channel strategy, content systems, thumbnails, scripting support and publishing workflows for consistent growth.',
-    meta: 'Scaling channels with smart systems',
-    benefit: 'Systems for consistent publishing and faster channel growth',
+    text: 'Strategize, automate, and scale your YouTube channel to grow subscribers and views.',
+    accent: 'cyan',
   },
   {
-    id: '07',
-    icon: 'LG',
-    title: 'Logo Designing',
-    text: 'Distinctive brand marks and logo systems designed to make your business look polished and memorable.',
-    meta: 'Clean identity and strong recall',
-    benefit: 'A stronger first impression for every customer touchpoint',
-  },
-  {
-    id: '08',
-    icon: 'BM',
-    title: 'Brand Marketing',
-    text: 'Positioning, campaigns and creative messaging that help your business stand out and stay trusted.',
-    meta: 'Awareness, trust and growth',
-    benefit: 'Sharper positioning with market-ready brand communication',
+    icon: 'spark',
+    title: 'Branding & Design',
+    text: 'Create a memorable brand with custom logos and designs that stand out.',
+    accent: 'pink',
   },
 ]
+
+const renderServiceIcon = (icon) => {
+  const commonProps = {
+    viewBox: '0 0 24 24',
+    fill: 'none',
+    stroke: 'currentColor',
+    strokeWidth: '1.8',
+    strokeLinecap: 'round',
+    strokeLinejoin: 'round',
+    'aria-hidden': 'true',
+  }
+
+  switch (icon) {
+    case 'monitor':
+      return (
+        <svg {...commonProps}>
+          <rect x="3" y="5" width="18" height="12" rx="2"></rect>
+          <path d="M8 20h8"></path>
+          <path d="M12 17v3"></path>
+        </svg>
+      )
+    case 'heart':
+      return (
+        <svg {...commonProps}>
+          <path d="M12 20s-6.5-4.2-8.4-8A4.9 4.9 0 0 1 12 6a4.9 4.9 0 0 1 8.4 6c-1.9 3.8-8.4 8-8.4 8Z"></path>
+        </svg>
+      )
+    case 'chart':
+      return (
+        <svg {...commonProps}>
+          <path d="M5 18V9"></path>
+          <path d="M10 18V6"></path>
+          <path d="M15 18v-4"></path>
+          <path d="M4 18h12"></path>
+          <circle cx="18" cy="8" r="3"></circle>
+          <path d="m20.5 10.5 2 2"></path>
+        </svg>
+      )
+    case 'video':
+      return (
+        <svg {...commonProps}>
+          <rect x="3" y="6" width="12" height="12" rx="2"></rect>
+          <path d="m10 10 4 2-4 2z"></path>
+          <path d="M18 9v6"></path>
+          <path d="M21 12h-6"></path>
+        </svg>
+      )
+    case 'youtube':
+      return (
+        <svg {...commonProps}>
+          <rect x="3" y="7" width="14" height="10" rx="3"></rect>
+          <path d="m10 10 4 2-4 2z"></path>
+          <circle cx="19" cy="14" r="2"></circle>
+          <path d="M19 10v1"></path>
+          <path d="M19 17v1"></path>
+          <path d="M16.2 11.2l.7.7"></path>
+          <path d="M21.1 16.1l.7.7"></path>
+          <path d="M21.8 11.2l-.7.7"></path>
+          <path d="M16.9 16.1l-.7.7"></path>
+        </svg>
+      )
+    case 'spark':
+      return (
+        <svg {...commonProps}>
+          <path d="m6 18 8-8"></path>
+          <path d="m14 7 3-3"></path>
+          <path d="M15 5h3"></path>
+          <path d="M16.5 3.5v3"></path>
+          <path d="M6 15h3"></path>
+          <path d="M7.5 13.5v3"></path>
+          <path d="M17 16h4"></path>
+          <path d="M19 14v4"></path>
+        </svg>
+      )
+    default:
+      return null
+  }
+}
 
 const differentiators = [
   {
@@ -328,75 +378,70 @@ function App() {
           <div className="hero-glow hero-glow-two" aria-hidden="true"></div>
 
           <div className="hero-copy">
-            <span className="eyebrow">Premium websites and marketing for growing businesses</span>
-            <h1>Get a Professional Website for Your Business</h1>
-            <p className="hero-offer">Starting at Rs. 6,999 | Delivered in 3-7 Days</p>
-            <p className="hero-text">
-              We design conversion-focused websites, software and marketing systems
-              that help your business look trusted, rank better and bring real enquiries.
-            </p>
+            <span className="eyebrow">Creative Code Hub</span>
+            <h1>Get a Website That Brings You Clients in 7 Days</h1>
+            <div className="hero-offer-stack">
+              <p className="hero-offer">Starting at Rs. 6,999</p>
+              <p className="hero-offer">Delivered Fast & Optimized for Leads</p>
+            </div>
 
             <div className="hero-actions">
-              <a className="button button-primary" href={whatsappLink}>
-                Get Consultation
-              </a>
-              <a className="button button-secondary" href={whatsappLink}>
-                WhatsApp Now
+              <a className="button button-primary hero-button-main" href={whatsappLink}>
+                Start on WhatsApp
               </a>
             </div>
 
-            <p className="hero-urgency">3 websites booked this week. 2 launch slots left.</p>
-
-            <div className="hero-trust-inline" aria-label="Trust indicators">
-              <span>Trusted by 50+ businesses</span>
-              <span>Delivered in 3-7 days</span>
-            </div>
-
-            <ul className="hero-points">
-              <li>3-7 day launch timeline</li>
-              <li>Starting at Rs. 6,999</li>
-              <li>Mobile friendly and SEO ready</li>
+            <ul className="hero-checklist">
+              <li>Mobile-Friendly</li>
+              <li>SEO Optimized</li>
+              <li>Results in 3-7 Days</li>
             </ul>
           </div>
 
-          <div className="hero-visual" aria-label="Creative Code Hub dashboard preview">
-            <div className="visual-card visual-primary">
-              <span className="visual-chip">Recent client wins</span>
-              <h2>Proof that feels real the moment visitors look at it</h2>
-              <div className="proof-list">
-                <div className="proof-item">
-                  <div>
-                    <strong>Nova Dental</strong>
-                    <span>Website redesign</span>
-                  </div>
-                  <b>+42% leads</b>
-                </div>
-                <div className="proof-item">
-                  <div>
-                    <strong>Urban Lift</strong>
-                    <span>Landing page funnel</span>
-                  </div>
-                  <b>3x conversions</b>
-                </div>
-                <div className="proof-item">
-                  <div>
-                    <strong>Pixel Brew</strong>
-                    <span>Premium brand refresh</span>
-                  </div>
-                  <b>Faster trust</b>
-                </div>
+          <div className="hero-visual hero-visual-showcase" aria-label="All World Express website showcase">
+            <div className="hero-window-frame">
+              <div className="hero-window-screen">
+                <img
+                  src="/allworldexpress-optimized.jpg"
+                  alt="All World Express website preview"
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
+                  width="1200"
+                  height="598"
+                />
               </div>
             </div>
 
-            <div className="visual-card visual-floating">
-              <span className="mini-label">WhatsApp preview</span>
-              <div className="chat-preview" aria-hidden="true">
-                <div className="chat-bubble incoming">Hi, I need a website for my clinic.</div>
-                <div className="chat-bubble outgoing">Done. We can launch a premium page in 5 days.</div>
-                <div className="chat-bubble incoming">What will it cost?</div>
-                <div className="chat-bubble outgoing">Starting from Rs. 6,999 with WhatsApp-ready CTA.</div>
-              </div>
-              <p>Simple offer, visible proof and one clear next step remove friction and boost response.</p>
+            <div className="hero-metric-badge">
+              <span className="hero-metric-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="M8 16c-1.6-3.8 1.3-8.5 8.7-11 .2 7.5-2.5 10.4-6.2 10.5L8 16Z"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M9 15 7 17"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                  />
+                  <path
+                    d="M10.5 13.5 8 16"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                  />
+                  <circle cx="14.5" cy="9.5" r="1.4" fill="currentColor" stroke="none"></circle>
+                </svg>
+              </span>
+              <span className="hero-metric-copy">
+                <strong>+42%</strong>
+                <small>Leads</small>
+              </span>
             </div>
           </div>
         </section>
@@ -420,34 +465,40 @@ function App() {
         </section>
 
         <section className="section" id="services" data-reveal>
-          <div className="section-heading">
-            <span className="eyebrow">Services</span>
-            <h2>Everything you need to look premium and convert better</h2>
-            <p>
-              Short copy, stronger visuals and smart CTA placement keep the experience
-              focused on business results.
-            </p>
+          <div className="services-intro">
+            <span className="eyebrow">Our Services</span>
+            <h2>Our Services</h2>
+            <p>Everything you need to grow your business online</p>
           </div>
 
-          <div className="service-grid">
-            {services.map((service) => (
-              <article key={service.title} className="glass-card service-card" data-reveal>
-                <span className="service-icon" aria-hidden="true">
-                  {service.icon}
-                </span>
-                <span className="card-id">{service.id}</span>
-                <h3>{service.title}</h3>
-                <p>{service.text}</p>
-                <small className="service-benefit">{service.benefit}</small>
-                <span className="service-meta">{service.meta}</span>
-              </article>
-            ))}
+          <div className="services-shell" data-reveal>
+            <div className="service-grid">
+              {services.map((service) => (
+                <article
+                  key={service.title}
+                  className={`service-card service-card-${service.accent}`}
+                  data-reveal
+                >
+                  <div className={`service-icon service-icon-${service.accent}`} aria-hidden="true">
+                    {renderServiceIcon(service.icon)}
+                  </div>
+                  <h3>{service.title}</h3>
+                  <p>{service.text}</p>
+                  <a
+                    className={`service-link service-link-${service.accent}`}
+                    href="#contact"
+                  >
+                    Learn More
+                  </a>
+                </article>
+              ))}
+            </div>
           </div>
 
           <div className="section-cta glass-card" data-reveal>
             <div>
-              <span className="eyebrow">Need a custom quote?</span>
-              <h3>Tell us what you need and we will recommend the right solution.</h3>
+              <span className="eyebrow">Need custom software too?</span>
+              <h3>We also build dashboards, admin panels, portals and custom business tools.</h3>
             </div>
             <div className="section-cta-actions">
               <a className="button button-primary" href="#contact">
