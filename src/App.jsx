@@ -33,6 +33,12 @@ const services = [
     accent: 'cyan',
   },
   {
+    icon: 'code',
+    title: 'Software Development',
+    text: 'Build custom software, dashboards, admin panels and business tools that streamline operations and scale with your workflow.',
+    accent: 'pink',
+  },
+  {
     icon: 'heart',
     title: 'Social Media Marketing',
     text: 'Grow your audience and generate leads through targeted social media campaigns.',
@@ -88,6 +94,14 @@ const renderServiceIcon = (icon) => {
       return (
         <svg {...commonProps}>
           <path d="M12 20s-6.5-4.2-8.4-8A4.9 4.9 0 0 1 12 6a4.9 4.9 0 0 1 8.4 6c-1.9 3.8-8.4 8-8.4 8Z"></path>
+        </svg>
+      )
+    case 'code':
+      return (
+        <svg {...commonProps}>
+          <path d="m8 8-4 4 4 4"></path>
+          <path d="m16 8 4 4-4 4"></path>
+          <path d="m14 5-4 14"></path>
         </svg>
       )
     case 'chart':
@@ -275,6 +289,12 @@ const testimonials = [
     avatar: 'AV',
     business: 'Real estate',
   },
+]
+
+const phoneNumbers = [
+  { label: 'Primary Call', display: '+91 6393956624', href: 'tel:+916393956624' },
+  { label: 'Call Line 2', display: '+91 7355639544', href: 'tel:+917355639544' },
+  { label: 'Call Line 3', display: '+91 7998148977', href: 'tel:+917998148977' },
 ]
 
 // Replace this demo number before publishing the website.
@@ -575,6 +595,7 @@ function App() {
           <div className="seo-links" data-reveal>
             <a href="/website-development-lucknow/">Website Development Lucknow</a>
             <a href="/digital-marketing-services/">Digital Marketing Services</a>
+            <a href="/software-development-lucknow/">Software Development Lucknow</a>
             <a href="/seo-services-lucknow/">SEO Services Lucknow</a>
             <a href="/social-media-marketing-lucknow/">Social Media Marketing Lucknow</a>
           </div>
@@ -598,6 +619,7 @@ function App() {
             </p>
             <div className="seo-links">
               <a href="/website-development-lucknow/">Explore our website development page</a>
+              <a href="/software-development-lucknow/">See software development services</a>
               <a href="/digital-marketing-services/">See digital marketing services</a>
               <a href="/seo-services-lucknow/">Read our SEO services page</a>
               <a href="/social-media-marketing-lucknow/">See social media marketing</a>
@@ -845,9 +867,11 @@ function App() {
               <a className="button button-primary" href={whatsappLink}>
                 WhatsApp Now
               </a>
-              <a className="button button-secondary" href="tel:+916393956624">
-                Call Us
-              </a>
+              {phoneNumbers.map((phone) => (
+                <a key={phone.href} className="button button-secondary" href={phone.href}>
+                  {phone.display}
+                </a>
+              ))}
             </div>
           </div>
         </section>
@@ -866,10 +890,12 @@ function App() {
                   <strong>WhatsApp</strong>
                   <span>Chat about your business website</span>
                 </a>
-                <a href="tel:+916393956624">
-                  <strong>Call</strong>
-                  <span>+91 6393956624</span>
-                </a>
+                {phoneNumbers.map((phone) => (
+                  <a key={phone.href} href={phone.href}>
+                    <strong>{phone.label}</strong>
+                    <span>{phone.display}</span>
+                  </a>
+                ))}
                 <a href="mailto:graphicdesigner.harshit@gmail.com">
                   <strong>Email</strong>
                   <span>graphicdesigner.harshit@gmail.com</span>
