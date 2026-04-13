@@ -614,7 +614,10 @@ a {
 .service-grid,
 .portfolio-grid,
 .testimonial-grid,
-.feature-grid {
+.feature-grid,
+.local-seo-grid,
+.process-grid,
+.faq-grid-home {
   display: grid;
   gap: 20px;
   margin-top: 32px;
@@ -898,6 +901,50 @@ a {
 .feature-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: 0;
+}
+
+.local-seo-grid,
+.process-grid,
+.faq-grid-home {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.local-seo-card,
+.process-card,
+.faq-card {
+  border-radius: 28px;
+  padding: 28px;
+}
+
+.local-seo-card h3,
+.process-card h3,
+.faq-card h3 {
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.35rem;
+  letter-spacing: -0.04em;
+}
+
+.local-seo-card p,
+.process-card p,
+.faq-card p {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.local-seo-card {
+  min-height: 220px;
+}
+
+.process-card,
+.faq-card {
+  min-height: 100%;
+}
+
+.process-card .feature-badge {
+  margin-bottom: 18px;
 }
 
 .feature-badge {
@@ -1496,7 +1543,10 @@ a {
   }
 
   .service-grid,
-  .portfolio-grid {
+  .portfolio-grid,
+  .local-seo-grid,
+  .process-grid,
+  .faq-grid-home {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1565,6 +1615,9 @@ a {
   .portfolio-grid,
   .testimonial-grid,
   .feature-grid,
+  .local-seo-grid,
+  .process-grid,
+  .faq-grid-home,
   .trust-bar {
     grid-template-columns: 1fr;
   }

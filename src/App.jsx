@@ -6,6 +6,7 @@ const navLinks = [
   { label: 'Services', href: '#services' },
   { label: 'Work', href: '#work' },
   { label: 'About', href: '#about' },
+  { label: 'FAQ', href: '#faq' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -157,6 +158,67 @@ const differentiators = [
   {
     title: 'Growth minded',
     text: 'Mobile-first layouts, SEO-ready structure and easy CTA paths support long-term business growth.',
+  },
+]
+
+const localSeoPillars = [
+  {
+    title: 'Website development in Lucknow',
+    text: 'We build business websites, landing pages and custom website systems for local brands that need stronger trust and better lead flow.',
+  },
+  {
+    title: 'SEO-ready page structure',
+    text: 'Clean headings, local intent copy, internal links, fast-loading assets and conversion-focused sections help every page work harder.',
+  },
+  {
+    title: 'Landing pages for search intent',
+    text: 'We create service pages for high-intent searches like website development, SEO services and digital marketing support.',
+  },
+  {
+    title: 'Marketing and automation support',
+    text: 'Beyond design, we help with SEO, content, branding and business workflows so your website supports long-term growth.',
+  },
+]
+
+const processSteps = [
+  {
+    title: 'Strategy and keyword direction',
+    text: 'We understand your business, target audience, local market and the search phrases your customers actually use.',
+  },
+  {
+    title: 'Content and conversion structure',
+    text: 'Every page is planned around trust, relevance and clear calls to action so visitors know exactly what to do next.',
+  },
+  {
+    title: 'Development and optimization',
+    text: 'We build fast pages with mobile-friendly layouts, SEO-friendly markup, structured content and lead-focused interactions.',
+  },
+  {
+    title: 'Launch, indexing and growth support',
+    text: 'After launch, we help connect analytics, search indexing and additional landing pages so the website keeps improving over time.',
+  },
+]
+
+const homeFaqs = [
+  {
+    question: 'How long does a business website usually take?',
+    answer:
+      'Most focused business websites can be designed, developed and launched in 3 to 7 days, depending on scope and content readiness.',
+  },
+  {
+    question: 'Can you help my website rank on Google?',
+    answer:
+      'Yes. We improve technical SEO, local SEO structure, content clarity, internal linking and landing page setup so the site is stronger for Google search.',
+  },
+  {
+    question: 'Do you build SEO landing pages for Lucknow businesses?',
+    answer:
+      'Yes. We build city and service-specific landing pages for businesses that want to target local searches such as website development in Lucknow and digital marketing services.',
+  },
+  {
+    question: 'Can I get website development, SEO and marketing together?',
+    answer:
+      'Yes. Creative Code Hub offers website development, SEO, social media marketing, branding, video support and related digital growth services together.',
   },
 ]
 
@@ -513,6 +575,43 @@ function App() {
           <div className="seo-links" data-reveal>
             <a href="/website-development-lucknow/">Website Development Lucknow</a>
             <a href="/digital-marketing-services/">Digital Marketing Services</a>
+            <a href="/seo-services-lucknow/">SEO Services Lucknow</a>
+            <a href="/social-media-marketing-lucknow/">Social Media Marketing Lucknow</a>
+          </div>
+        </section>
+
+        <section className="section split-section" id="local-seo" data-reveal>
+          <div className="section-heading split-copy">
+            <span className="eyebrow">Website Development Company in Lucknow</span>
+            <h2>Built to rank, convert and help local businesses grow online</h2>
+            <p>
+              Creative Code Hub helps businesses in Lucknow with website development,
+              SEO-friendly landing pages, digital marketing support and custom
+              software solutions. Our goal is simple: build pages that look premium,
+              load fast and turn visitors into enquiries.
+            </p>
+            <p>
+              If you want a website development company in Lucknow that understands
+              local business goals, search visibility and conversion-focused design,
+              we create websites that are easier to trust, easier to navigate and
+              easier to scale with SEO content over time.
+            </p>
+            <div className="seo-links">
+              <a href="/website-development-lucknow/">Explore our website development page</a>
+              <a href="/digital-marketing-services/">See digital marketing services</a>
+              <a href="/seo-services-lucknow/">Read our SEO services page</a>
+              <a href="/social-media-marketing-lucknow/">See social media marketing</a>
+              <a href="#faq">Read common SEO questions</a>
+            </div>
+          </div>
+
+          <div className="local-seo-grid">
+            {localSeoPillars.map((item) => (
+              <article key={item.title} className="glass-card local-seo-card" data-reveal>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -532,6 +631,28 @@ function App() {
                 <span className="feature-badge">0{index + 1}</span>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section" id="process" data-reveal>
+          <div className="section-heading">
+            <span className="eyebrow">Our Process</span>
+            <h2>How we build SEO-friendly websites that support business growth</h2>
+            <p>
+              Ranking stronger usually needs more than just design. We combine
+              keyword direction, conversion-focused structure, fast development and
+              practical launch support so the website becomes a better business asset.
+            </p>
+          </div>
+
+          <div className="process-grid">
+            {processSteps.map((step, index) => (
+              <article key={step.title} className="glass-card process-card" data-reveal>
+                <span className="feature-badge">Step {index + 1}</span>
+                <h3>{step.title}</h3>
+                <p>{step.text}</p>
               </article>
             ))}
           </div>
@@ -685,6 +806,26 @@ function App() {
                 WhatsApp Now
               </a>
             </div>
+          </div>
+        </section>
+
+        <section className="section faq-section" id="faq" data-reveal>
+          <div className="section-heading">
+            <span className="eyebrow">FAQ</span>
+            <h2>Common questions about website development, SEO and ranking</h2>
+            <p>
+              These are the questions businesses usually ask before starting a new
+              website, SEO landing page or local marketing project with us.
+            </p>
+          </div>
+
+          <div className="faq-grid-home">
+            {homeFaqs.map((item) => (
+              <article key={item.question} className="glass-card faq-card" data-reveal>
+                <h3>{item.question}</h3>
+                <p>{item.answer}</p>
+              </article>
+            ))}
           </div>
         </section>
 

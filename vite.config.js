@@ -14,6 +14,8 @@ export default defineConfig({
         main: resolve(rootDir, 'index.html'),
         websiteDevelopmentLucknow: resolve(rootDir, 'website-development-lucknow/index.html'),
         digitalMarketingServices: resolve(rootDir, 'digital-marketing-services/index.html'),
+        seoServicesLucknow: resolve(rootDir, 'seo-services-lucknow/index.html'),
+        socialMediaMarketingLucknow: resolve(rootDir, 'social-media-marketing-lucknow/index.html'),
       },
     },
   },
