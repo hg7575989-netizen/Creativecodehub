@@ -31,42 +31,49 @@ const services = [
     title: 'Website Development',
     text: 'Get a professional, fast, and SEO-friendly website that converts visitors into customers.',
     accent: 'cyan',
+    href: '/website-development-lucknow/',
   },
   {
     icon: 'code',
     title: 'Software Development',
     text: 'Build custom software, dashboards, admin panels and business tools that streamline operations and scale with your workflow.',
     accent: 'pink',
+    href: '/software-development-lucknow/',
   },
   {
     icon: 'heart',
     title: 'Social Media Marketing',
     text: 'Grow your audience and generate leads through targeted social media campaigns.',
     accent: 'pink',
+    href: '/social-media-marketing-lucknow/',
   },
   {
     icon: 'chart',
     title: 'SEO & Local Ranking',
     text: 'Boost your visibility on Google and attract more local customers searching for your services.',
     accent: 'cyan',
+    href: '/seo-services-lucknow/',
   },
   {
     icon: 'video',
     title: 'Video Editing',
     text: 'Engage your viewers with attention-grabbing videos designed to retain and convert.',
     accent: 'cyan',
+    href: '/video-editing-services-lucknow/',
   },
   {
     icon: 'youtube',
     title: 'YouTube Automation',
     text: 'Strategize, automate, and scale your YouTube channel to grow subscribers and views.',
     accent: 'cyan',
+    href: '/youtube-automation-services/',
   },
   {
     icon: 'spark',
     title: 'Branding & Design',
     text: 'Create a memorable brand with custom logos and designs that stand out.',
     accent: 'pink',
+    href: '/branding-and-logo-design-lucknow/',
   },
 ]
 
@@ -228,6 +235,11 @@ const homeFaqs = [
     question: 'Do you build SEO landing pages for Lucknow businesses?',
     answer:
       'Yes. We build city and service-specific landing pages for businesses that want to target local searches such as website development in Lucknow and digital marketing services.',
+  },
+  {
+    question: 'Can you help if I searched website developer near me or website designer near me?',
+    answer:
+      'Yes. If you are searching for a website developer near me, website developer near me freelancer, website designer near me cheap or website designer near me open now, we help businesses in Lucknow with affordable, fast and conversion-focused website solutions.',
   },
   {
     question: 'Can I get website development, SEO and marketing together?',
@@ -568,7 +580,7 @@ function App() {
                   <p>{service.text}</p>
                   <a
                     className={`service-link service-link-${service.accent}`}
-                    href="#contact"
+                    href={service.href}
                   >
                     Learn More
                   </a>
@@ -598,6 +610,9 @@ function App() {
             <a href="/software-development-lucknow/">Software Development Lucknow</a>
             <a href="/seo-services-lucknow/">SEO Services Lucknow</a>
             <a href="/social-media-marketing-lucknow/">Social Media Marketing Lucknow</a>
+            <a href="/video-editing-services-lucknow/">Video Editing Services</a>
+            <a href="/youtube-automation-services/">YouTube Automation Services</a>
+            <a href="/branding-and-logo-design-lucknow/">Branding and Logo Design</a>
           </div>
         </section>
 
@@ -617,12 +632,22 @@ function App() {
               we create websites that are easier to trust, easier to navigate and
               easier to scale with SEO content over time.
             </p>
+            <p>
+              Businesses often search phrases like website developer near me,
+              website developer near me freelancer, website designer near me cheap
+              and website designer near me open now when they need fast help. We
+              position Creative Code Hub for that intent with local support,
+              affordable packages and business-focused website execution.
+            </p>
             <div className="seo-links">
               <a href="/website-development-lucknow/">Explore our website development page</a>
               <a href="/software-development-lucknow/">See software development services</a>
               <a href="/digital-marketing-services/">See digital marketing services</a>
               <a href="/seo-services-lucknow/">Read our SEO services page</a>
               <a href="/social-media-marketing-lucknow/">See social media marketing</a>
+              <a href="/video-editing-services-lucknow/">Explore video editing services</a>
+              <a href="/youtube-automation-services/">See YouTube automation services</a>
+              <a href="/branding-and-logo-design-lucknow/">See branding and logo design</a>
               <a href="#faq">Read common SEO questions</a>
             </div>
           </div>
