@@ -220,6 +220,21 @@ const processSteps = [
   },
 ]
 
+const brandSignals = [
+  {
+    title: 'Official Creative Code Hub website',
+    text: 'This homepage acts as the main destination for Creative Code Hub, with direct access to services, contact details and official landing pages.',
+  },
+  {
+    title: 'Lucknow-based digital services brand',
+    text: 'Creative Code Hub serves businesses with website development, software development, SEO, digital marketing, branding and content support.',
+  },
+  {
+    title: 'Consistent brand and service coverage',
+    text: 'Our pages are structured so Google can connect the Creative Code Hub brand with the services people search for most often.',
+  },
+]
+
 const homeFaqs = [
   {
     question: 'How long does a business website usually take?',
@@ -473,11 +488,15 @@ function App() {
 
           <div className="hero-copy">
             <span className="eyebrow">Creative Code Hub</span>
-            <h1>Get a Website That Brings You Clients in 7 Days</h1>
+            <h1>Creative Code Hub Builds Websites That Bring You Clients in 7 Days</h1>
             <div className="hero-offer-stack">
               <p className="hero-offer">Starting at Rs. 6,999</p>
               <p className="hero-offer">Delivered Fast & Optimized for Leads</p>
             </div>
+            <p className="hero-brand-note">
+              Creative Code Hub is the official website for our web development,
+              software, SEO and digital growth services in Lucknow.
+            </p>
 
             <div className="hero-actions">
               <a className="button button-primary hero-button-main" href={whatsappLink}>
@@ -676,6 +695,27 @@ function App() {
             {differentiators.map((item, index) => (
               <article key={item.title} className="glass-card feature-card" data-reveal>
                 <span className="feature-badge">0{index + 1}</span>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section" id="brand" data-reveal>
+          <div className="section-heading">
+            <span className="eyebrow">About Creative Code Hub</span>
+            <h2>Creative Code Hub is the official brand hub for our core services</h2>
+            <p>
+              When someone searches for Creative Code Hub, this page should clearly
+              signal the brand, the services we offer and the official paths people
+              can use to contact us or explore our work.
+            </p>
+          </div>
+
+          <div className="brand-grid">
+            {brandSignals.map((item) => (
+              <article key={item.title} className="glass-card brand-card" data-reveal>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </article>
@@ -981,6 +1021,24 @@ function App() {
           </div>
         </section>
         </main>
+
+        <footer className="site-footer glass-card" data-reveal>
+          <div className="site-footer-copy">
+            <strong>Creative Code Hub</strong>
+            <p>
+              Official website of Creative Code Hub for website development,
+              software development, SEO, digital marketing, branding, video editing
+              and YouTube automation services.
+            </p>
+          </div>
+          <div className="footer-links" aria-label="Footer links">
+            <a href="/">Home</a>
+            <a href="/website-development-lucknow/">Website Development</a>
+            <a href="/software-development-lucknow/">Software Development</a>
+            <a href="/seo-services-lucknow/">SEO Services</a>
+            <a href="/digital-marketing-services/">Digital Marketing</a>
+          </div>
+        </footer>
       </div>
       <a className="floating-whatsapp" href={whatsappLink} aria-label="Chat on WhatsApp">
         WhatsApp
