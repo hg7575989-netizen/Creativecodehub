@@ -235,6 +235,69 @@ const brandSignals = [
   },
 ]
 
+const keywordServiceClusters = [
+  {
+    title: 'Custom web development services',
+    text: 'We provide custom web development services, web development services and full-stack development services for businesses that need fast, responsive and conversion-focused digital products, including teams that want to hire web developer support for a specific service such as a logistics app.',
+  },
+  {
+    title: 'Ecommerce website development agency',
+    text: 'As an ecommerce website development agency and ecommerce website design agency, we build custom business website experiences that support products, trust and better buying journeys.',
+  },
+  {
+    title: 'Enterprise web application development',
+    text: 'We support enterprise web application development, custom web application developer needs and React web application development for teams that need scalable business systems.',
+  },
+  {
+    title: 'API integration services',
+    text: 'Our API integration services, custom database integration for business and business process automation services help reduce manual work and connect core business tools.',
+  },
+  {
+    title: 'Progressive Web App development',
+    text: 'We offer PWA development services, Progressive Web App development and Server-Side Rendering optimization for brands that want modern, fast and installable experiences.',
+  },
+  {
+    title: 'Web development company in Lucknow',
+    text: 'Creative Code Hub positions itself as a web development company in Lucknow for businesses looking for a best web development agency, hire full-stack developer support and affordable web development for startups.',
+  },
+]
+
+const technologyKeywords = [
+  'Next.js development services',
+  'React.js development services',
+  'Node.js backend development',
+  'TypeScript development services',
+  'MERN stack development agency',
+  'Responsive web design services',
+  'Fast loading website design',
+  'Professional website design',
+  'Small business website development',
+  'Website redesign services',
+]
+
+const insightTopics = [
+  {
+    title: 'How to build a custom business management software',
+    text: 'The best starting point is understanding workflow pain points, data flow, user roles, automation needs and what should be handled by dashboards, portals or internal admin tools.',
+  },
+  {
+    title: 'Benefits of digitizing logistics business',
+    text: 'Digitizing logistics workflows can improve tracking, reduce manual coordination, centralize records and make operational decisions faster for growing teams.',
+  },
+  {
+    title: 'Modern web trends for small businesses in 2026',
+    text: 'Small businesses benefit most from fast loading website design, mobile-first layouts, stronger trust design, local SEO structure and clear conversion journeys.',
+  },
+  {
+    title: 'Why your business needs a Progressive Web App',
+    text: 'A Progressive Web App can improve speed, repeat visits and usability for customers who want app-like convenience without a full native app build.',
+  },
+  {
+    title: 'Custom software vs off-the-shelf solutions',
+    text: 'Off-the-shelf tools can be faster to start with, but custom software often wins when your business needs process fit, integrations and long-term control.',
+  },
+]
+
 const homeFaqs = [
   {
     question: 'How long does a business website usually take?',
@@ -723,6 +786,27 @@ function App() {
           </div>
         </section>
 
+        <section className="section" id="development-services" data-reveal>
+          <div className="section-heading">
+            <span className="eyebrow">Development Services</span>
+            <h2>Web, software and full-stack development services for growing businesses</h2>
+            <p>
+              These service clusters reflect the kinds of web development, software
+              and business technology searches companies use when they want serious
+              execution, faster delivery and stronger digital systems.
+            </p>
+          </div>
+
+          <div className="brand-grid">
+            {keywordServiceClusters.map((item) => (
+              <article key={item.title} className="glass-card brand-card" data-reveal>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section className="section" id="process" data-reveal>
           <div className="section-heading">
             <span className="eyebrow">Our Process</span>
@@ -741,6 +825,25 @@ function App() {
                 <h3>{step.title}</h3>
                 <p>{step.text}</p>
               </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section" id="technology" data-reveal>
+          <div className="section-heading">
+            <span className="eyebrow">Tech Focus</span>
+            <h2>Technologies and delivery capabilities businesses commonly look for</h2>
+            <p>
+              We also align our services with popular development searches around
+              modern frameworks, performance, design quality and scalable app delivery.
+            </p>
+          </div>
+
+          <div className="seo-links">
+            {technologyKeywords.map((keyword) => (
+              <a key={keyword} href="#contact">
+                {keyword}
+              </a>
             ))}
           </div>
         </section>
@@ -911,6 +1014,26 @@ function App() {
               <article key={item.question} className="glass-card faq-card" data-reveal>
                 <h3>{item.question}</h3>
                 <p>{item.answer}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section" id="insights" data-reveal>
+          <div className="section-heading">
+            <span className="eyebrow">Business Insights</span>
+            <h2>Helpful topics around software, logistics and modern web growth</h2>
+            <p>
+              These content themes help connect Creative Code Hub with informational
+              searches businesses use before they hire a team or request a project quote.
+            </p>
+          </div>
+
+          <div className="brand-grid">
+            {insightTopics.map((item) => (
+              <article key={item.title} className="glass-card brand-card" data-reveal>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
               </article>
             ))}
           </div>
