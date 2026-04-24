@@ -300,6 +300,11 @@ const insightTopics = [
 
 const homeFaqs = [
   {
+    question: 'What is the official website of Creative Code Hub?',
+    answer:
+      'The official Creative Code Hub website for our web development, software development, SEO and digital marketing services is creativecodehub.onrender.com.',
+  },
+  {
     question: 'How long does a business website usually take?',
     answer:
       'Most focused business websites can be designed, developed and launched in 3 to 7 days, depending on scope and content readiness.',
@@ -558,7 +563,8 @@ function App() {
             </div>
             <p className="hero-brand-note">
               Creative Code Hub is the official website for our web development,
-              software, SEO and digital growth services in Lucknow.
+              software, SEO and digital growth services in Lucknow, with dedicated
+              landing pages for each core service.
             </p>
 
             <div className="hero-actions">
