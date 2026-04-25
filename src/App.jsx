@@ -77,6 +77,17 @@ const services = [
   },
 ]
 
+const officialServicePages = [
+  { label: 'Official Website Development page', href: '/website-development-lucknow/' },
+  { label: 'Official Software Development page', href: '/software-development-lucknow/' },
+  { label: 'Official SEO Services page', href: '/seo-services-lucknow/' },
+  { label: 'Official Digital Marketing Services page', href: '/digital-marketing-services/' },
+  { label: 'Official Social Media Marketing page', href: '/social-media-marketing-lucknow/' },
+  { label: 'Official Video Editing Services page', href: '/video-editing-services-lucknow/' },
+  { label: 'Official YouTube Automation Services page', href: '/youtube-automation-services/' },
+  { label: 'Official Branding and Logo Design page', href: '/branding-and-logo-design-lucknow/' },
+]
+
 const renderServiceIcon = (icon) => {
   const commonProps = {
     viewBox: '0 0 24 24',
@@ -669,8 +680,9 @@ function App() {
                   <a
                     className={`service-link service-link-${service.accent}`}
                     href={service.href}
+                    aria-label={`Explore ${service.title}`}
                   >
-                    Learn More
+                    Explore {service.title}
                   </a>
                 </article>
               ))}
@@ -788,6 +800,26 @@ function App() {
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section" id="official-pages" data-reveal>
+          <div className="section-heading">
+            <span className="eyebrow">Official Service Pages</span>
+            <h2>Dedicated pages that help Google understand each core service clearly</h2>
+            <p>
+              These official Creative Code Hub pages are built around focused service
+              intent, stronger internal linking and clearer crawl paths so search engines
+              can connect our brand with each business solution more confidently.
+            </p>
+          </div>
+
+          <div className="seo-links" data-reveal>
+            {officialServicePages.map((page) => (
+              <a key={page.href} href={page.href}>
+                {page.label}
+              </a>
             ))}
           </div>
         </section>
@@ -1162,10 +1194,12 @@ function App() {
           </div>
           <div className="footer-links" aria-label="Footer links">
             <a href="/">Home</a>
-            <a href="/website-development-lucknow/">Website Development</a>
-            <a href="/software-development-lucknow/">Software Development</a>
-            <a href="/seo-services-lucknow/">SEO Services</a>
-            <a href="/digital-marketing-services/">Digital Marketing</a>
+            {officialServicePages.map((page) => (
+              <a key={page.href} href={page.href}>
+                {page.label.replace('Official ', '').replace(' page', '')}
+              </a>
+            ))}
+            <a href="#contact">Contact Creative Code Hub</a>
           </div>
         </footer>
       </div>
