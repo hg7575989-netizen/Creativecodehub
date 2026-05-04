@@ -1,0 +1,17 @@
+{
+  "name": "Creative Code Hub",
+  "short_name": "CCH",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#07111f",
+  "description": "Creative Code Hub website development, SEO, software and digital marketing services in Lucknow.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
