@@ -6,7 +6,7 @@ const rootDir = fileURLToPath(new URL('..', import.meta.url))
 const publicDir = resolve(rootDir, 'public')
 const baseUrl = 'https://creativecodehub.onrender.com'
 const ignoredDirs = new Set(['.git', 'dist', 'node_modules', 'public', 'scripts', 'src'])
-const today = new Date().toISOString().slice(0, 10)
+const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Calcutta' }).format(new Date())
 
 const pageDirs = readdirSync(rootDir)
   .filter((entry) => {

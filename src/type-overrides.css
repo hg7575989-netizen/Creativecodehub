@@ -1,0 +1,39 @@
+/* Readability pass: keep the editorial scale, give supporting copy more room. */
+.hero-lede { font-size: 1.02rem; }
+.benefit-item > span:last-child { font-size: .75rem; }
+.section-intro p { font-size: .95rem; }
+.service-card p { font-size: .78rem; }
+.service-link { font-size: .7rem; }
+.service-footnote a, .text-link { font-size: .76rem; }
+.project-meta p { font-size: .76rem; }
+.work-footer { font-size: .79rem; }
+.comparison-copy p { font-size: .9rem; }
+.value-row p, .process-step-copy p { font-size: .8rem; }
+.investment-heading p { font-size: .88rem; }
+.pricing-card p { font-size: .76rem; }
+.pricing-card a { font-size: .68rem; }
+.faq-item button > span:first-child { font-size: .95rem; }
+.faq-answer p { font-size: .82rem; }
+.contact-copy > p { font-size: .9rem; }
+.contact-details strong { font-size: .78rem; }
+.form-grid label { font-size: .68rem; }
+.form-grid input, .form-grid select, .form-grid textarea { font-size: .78rem; }
+.footer-grid a { font-size: .74rem; }
+.footer-bottom { font-size: .64rem; }
+
+@media (max-width: 760px) {
+  .hero-lede { font-size: .94rem; }
+  .section-intro p { font-size: .86rem; }
+  .service-card p { font-size: .7rem; }
+  .service-link { font-size: .64rem; }
+  .project-meta p { font-size: .74rem; }
+  .comparison-copy p { font-size: .84rem; }
+  .value-row p, .process-step-copy p { font-size: .74rem; }
+  .investment-heading p { font-size: .82rem; }
+  .pricing-card p { font-size: .68rem; }
+  .faq-item button > span:first-child { font-size: .82rem; }
+  .faq-answer p { font-size: .76rem; }
+  .contact-copy > p { font-size: .82rem; }
+  .form-grid label { font-size: .64rem; }
+  .form-grid input, .form-grid select, .form-grid textarea { font-size: .72rem; }
+}
